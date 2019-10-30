@@ -1,0 +1,12 @@
+{
+  "id": "ArmorsmithExtended_patcher",
+  "name": "Armorsmith Extended patcher",
+  "author": "mrudat",
+  "version": "0.0.1",
+  "released": "2019-06-06",
+  "updated": "2019-06-06",
+  "description": "Adds AWKCR+AE support to ARMO records",
+  "requires": ["unifiedPatchingFramework"],
+  "moduleLoader": "UPF",
+  "canHotLoad": true
+}

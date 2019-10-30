@@ -1,0 +1,23 @@
+<p>Processes ARMO records, modifying them to support Armorsmith Extended</p>
+
+<p>Does not (currently) process Power Armor pieces.</p>
+
+<p>For those records that have already has been modified to support Armorsmith Extended, this should make no changes.</p>
+
+<p>If a records has only had AWKCR keywords added, this should make the armor compatible with Armorsmith Extended.</p>
+
+<p>For records without AWKCR keywords, it reads <a href="https://tools.ietf.org/html/rfc4180">csv files</a> named <code>.../data/Tools/ArmorsmithExtended_patcher/mod.csv</code> (eg. <code>Fallout4.esm.csv</code>). The intent is that these files can be included with the original mod or a compatibility patch collection.</p>
+
+<table>
+  <thead>
+    <tr><th>field</th><th>Type</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>armorEditorID</td><td>EDID</td><td>editorID of the armor</td><tr>
+    <tr><td>slotKeyword</td><td>KYWD</td><td>AWKCR slot keyword. (eg. <code>_ClothingSlotDevice</code>)</td><tr>
+    <tr><td>classKeyword</td><td>KYWD</td><td>AWKCR class keyword. (eg. <code>_ClothingClassCasual</code>)</td><tr>
+    <tr><td>slotMask</td><td>string</td><td>Comma separated list of slots numbers this armor uses. If not specified, uses the AWKCR slot keyword to set the slots the armor uses.</td><tr>
+    <tr><td>addsCarryWeight</td><td>boolean</td><td>Set to Y if the armor should increase carry weight. eg. includes lots of pockets or pouches or includes a pack.</td><tr>
+    <tr><td>isHighTech</td><td>boolean</td><td>Set to Y if the armor should have thermoptics camoflauge.</td><tr>
+  </tbody>
+</table>
